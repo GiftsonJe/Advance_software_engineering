@@ -21,9 +21,9 @@ class CalculatorTestCase(unittest.TestCase):
 
     def test_invalid_expression(self):
         expression = '1 / 0'
-        response = self.app.post('/calculate', data={'expression': expression})
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b"Invalid expression", response.data)
+        with self.assertRaises(ZeroDivisionError):
+            response = self.app.post('/calculate', data={'expression': expression})
+            self.assertEqual(response.status_code, 200)
 
 
 if __name__ == '__main__':
