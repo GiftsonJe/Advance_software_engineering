@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+}
