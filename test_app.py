@@ -20,10 +20,11 @@ class CalculatorTestCase(unittest.TestCase):
         self.assertIn(f"Result: {eval(expression)}".encode(), response.data)
 
     def test_invalid_expression(self):
-    expression = '1 / 0'
-    response = self.app.post('/calculate', data={'expression': expression})
-    self.assertEqual(response.status_code, 200)
-    self.assertIn(b"Invalid expression", response.data)
+        expression = '1 / 0'
+        response = self.app.post('/calculate', data={'expression': expression})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b"Invalid expression", response.data)
+
 
 if __name__ == '__main__':
     unittest.main()
