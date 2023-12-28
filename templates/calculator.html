@@ -11,27 +11,29 @@
     <form method="post" action="{{ url_for('calculate') }}">
         <input type="text" name="expression" value="{{ expression }}" placeholder="Enter expression" required>
         <br>
-        <button type="button" onclick="document.forms[0].expression.value += '1'">1</button>
-        <button type="button" onclick="document.forms[0].expression.value += '2'">2</button>
-        <button type="button" onclick="document.forms[0].expression.value += '3'">3</button>
-        <button type="button" onclick="document.forms[0].expression.value += '+'">+</button>
-        <br>
-        <button type="button" onclick="document.forms[0].expression.value += '4'">4</button>
-        <button type="button" onclick="document.forms[0].expression.value += '5'">5</button>
-        <button type="button" onclick="document.forms[0].expression.value += '6'">6</button>
-        <button type="button" onclick="document.forms[0].expression.value += '-'">-</button>
-        <br>
-        <button type="button" onclick="document.forms[0].expression.value += '7'">7</button>
-        <button type="button" onclick="document.forms[0].expression.value += '8'">8</button>
-        <button type="button" onclick="document.forms[0].expression.value += '9'">9</button>
-        <button type="button" onclick="document.forms[0].expression.value += '*'">*</button>
-        <br>
-        <button type="button" onclick="document.forms[0].expression.value += '0'">0</button>
-        <button type="button" onclick="document.forms[0].expression.value += '.'">.</button>
-        <button type="button" onclick="document.forms[0].expression.value = ''">C</button>
-        <button type="button" onclick="document.forms[0].expression.value = document.forms[0].expression.value.slice(0, -1)">←</button>
-        <br>
-        <button type="submit" style="width: 100%;">Calculate</button>
+        <div class="button-container">
+            <button type="button" onclick="document.forms[0].expression.value += '1'">1</button>
+            <button type="button" onclick="document.forms[0].expression.value += '2'">2</button>
+            <button type="button" onclick="document.forms[0].expression.value += '3'">3</button>
+            <button type="button" onclick="document.forms[0].expression.value += '+'">+</button>
+            <br>
+            <button type="button" onclick="document.forms[0].expression.value += '4'">4</button>
+            <button type="button" onclick="document.forms[0].expression.value += '5'">5</button>
+            <button type="button" onclick="document.forms[0].expression.value += '6'">6</button>
+            <button type="button" onclick="document.forms[0].expression.value += '-'">-</button>
+            <br>
+            <button type="button" onclick="document.forms[0].expression.value += '7'">7</button>
+            <button type="button" onclick="document.forms[0].expression.value += '8'">8</button>
+            <button type="button" onclick="document.forms[0].expression.value += '9'">9</button>
+            <button type="button" onclick="document.forms[0].expression.value += '*'">*</button>
+            <br>
+            <button type="button" onclick="document.forms[0].expression.value += '0'">0</button>
+            <button type="button" onclick="document.forms[0].expression.value += '.'">.</button>
+            <button type="button" onclick="document.forms[0].expression.value = ''">C</button>
+            <button type="button" onclick="document.forms[0].expression.value = document.forms[0].expression.value.slice(0, -1)">←</button>
+            <br>
+        </div>
+        <button type="submit" class="calculate-button">Calculate</button>
     </form>
 
     {% if result %}

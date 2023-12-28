@@ -10,10 +10,18 @@ input {
     margin: 5px;
     font-size: 16px;
 }
-
+.button-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 button {
-    width: 48%;
+    width: 20%;
     padding: 10px;
     font-size: 16px;
     margin: 5px;
+    background-color: red;
+}
+.calculate-button {
+    width: 100%;
 }
